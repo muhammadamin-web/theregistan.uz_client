@@ -1,0 +1,45 @@
+.card_title{
+    line-height: 40px;
+    // padding: 6px 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    @media  (max-width: 1000px) {
+        // margin-top: 0px;
+        line-height: 30px;
+
+    }
+    @media  (max-width: 767px) {
+        // margin-top: 0px;
+        line-height: 40px;
+
+    }
+    @media  (max-width: 600px) {
+        // margin-top: 0px;
+        line-height: 33px;
+
+    }
+    @media  (max-width: 400px) {
+        // margin-top: 0px;
+        line-height: 25px;
+
+    }
+}
+.card_image{
+    height: 300px;
+}
+.card_content{
+    @media (min-width: 1000px) and (max-width: 1600px) {
+ 
+            transform: scale(0.8);
+            transform-origin: top left;
+            width: 125%;
+            height: 100%;
+            overflow: hidden;
+        
+    }
+    @media  (max-width: 747px) {
+ padding-top: 11px;
+       padding-bottom: 50px;
+    
+}
+}

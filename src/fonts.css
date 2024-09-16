@@ -1,0 +1,170 @@
+@layer base {
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 400;
+    src: local("TT Travels Next Trl"),
+      url("/fonts/tt-travels-next-trl-cdnfonts/Travels Next Trial Regular.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 400;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 100;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Thin.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 100;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Thin Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 200;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial ExtraLight.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 200;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial ExtraLight Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 300;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Light.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 300;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Light Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 500;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Medium.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 500;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Medium Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 600;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial DemiBold.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 600;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial DemiBold Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 700;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Bold.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 700;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Bold Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 800;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial ExtraBold.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 800;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial ExtraBold Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 900;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Black.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 900;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Black Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: normal;
+    font-weight: 910;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Black Outline.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trl;
+    font-style: italic;
+    font-weight: 910;
+    src: local("TT Travels Next Trl"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Black Outline Italic.woff")
+        format("woff");
+  }
+  @font-face {
+    font-family: tt travels next trial variable;
+    font-style: normal;
+    font-weight: 400;
+    src: local("TT Travels Next Trial Variable"),
+      url("./tt-travels-next-trl-cdnfonts/Travels Next Trial Variable.woff")
+        format("woff");
+  }
+}

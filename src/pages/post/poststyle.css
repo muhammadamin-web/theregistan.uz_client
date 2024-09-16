@@ -1,0 +1,127 @@
+/* maingreen: "#D3F920",
+mainblack: "#131313",
+darkgrey: "#898989", */
+
+.text {
+  /* border: 1px solid #000; */
+  margin-inline: auto;
+  container-type: inline-size;
+  /* width: 80%; */
+}
+
+.text h1,
+.text h2 {
+  font-size: clamp(12px, 4vw, 26px);
+  color: #131313;
+  font-weight: 500;
+}
+
+.text p {
+  color: #000;
+  /* font-size: 20px; */
+  font-size: 20px;
+  /* font-size: 3cqi; */
+  /* font-family: "Montserrat", "sans-serif"; */
+  /* font-family: "Inter", "Helvetica", "Arial", "sans-serif"; */
+}
+@media(max-width:600px){
+  .text p {
+font-size: 16px;
+  }
+}
+.text img {
+  /* border: 1px solid #000; */
+  /* width: 100%;
+  margin: auto;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-height: 70vh;
+  object-fit: cover; */
+  object-fit: cover;
+  border-radius: 15px;
+  width: 100%;
+  margin-block: 10px;
+
+  aspect-ratio: 1.94/1;
+}
+
+.text iframe {
+  width: 100%;
+  aspect-ratio: 1.94/1;
+  border-radius: 15px;
+}
+
+.text br {
+  content: "";
+  display: block;
+  height: 0.5em;
+}
+
+/* .text h1,
+.text p,
+.text p strong,
+.text span,
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6,
+.text strong,
+.text blockquote {
+  max-width: 1280px;
+  max-width: 75vw;
+  padding-inline: 50px;
+  margin: auto;
+} */
+
+.text blockquote {
+  border-left: 3px solid #d3f920;
+  padding-left: 2cqi;
+  font-weight: 600;
+  font-size: clamp(15px, 3cqi, 21px);
+}
+
+/* .text p:has(> img) {
+    width: 110%;
+    transform: translateX(-5%);
+  
+} */
+
+@media screen and (max-width: 767px) {
+  .text p:has(> img) {
+    /* width: 110%; */
+    /* transform: translateX(-5%); */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text iframe {
+    /* width: 110%; */
+    /* transform: translateX(-5%); */
+    aspect-ratio: 5/3;
+  }
+  .text img {
+    aspect-ratio: 5/3;
+  }
+}
+.post_banner{
+  width: 75%;
+  margin-left: 12.5%;
+  height: auto;
+}
+@media screen and (max-width: 1024px) {
+  .post_banner{
+    width: 90%;
+    margin-left: 5%;
+margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .post_banner{
+    width: 100%;
+    margin-left: 0%;
+
+  }
+}
