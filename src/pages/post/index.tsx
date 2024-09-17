@@ -116,7 +116,7 @@ export default function Post(): JSX.Element {
             rel='noopener noreferrer'
             className='share-button facebook-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold '
           >
-            <img src={facebook} alt="" />
+            <img className="facebook_image" src={facebook} alt="" />
           </a>
 
           <a
@@ -138,16 +138,16 @@ export default function Post(): JSX.Element {
             rel='noopener noreferrer'
             className='share-button facebook-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold '
           >
-            <img src={x} alt="" />
+            <img className="x" src={x} alt="" />
           </a>
 
           <a
   href={`https://vk.com/share.php?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(post?.title)}`}
   target='_blank'
   rel='noopener noreferrer'
-  className='share-button vk-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold'
+  className='share-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold'
 >
-  <img src={vk} alt="VK" />
+  <img className="vk-button" src={vk} alt="VK" />
 </a>
 
 <a
@@ -159,7 +159,7 @@ export default function Post(): JSX.Element {
   }}
   className='share-button copy-link-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold'
 >
-  <img src={copy_link} alt="Copy Link" />
+  <img className="copy_link" src={copy_link} alt="Copy Link" />
 </a>
 
 
