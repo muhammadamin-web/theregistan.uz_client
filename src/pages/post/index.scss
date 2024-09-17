@@ -11,6 +11,9 @@ font-size: 30px;
 .detail_container{
     width: 80%;
 }
+.post_banner{
+    object-fit: cover;
+}
 @media(max-width:1000px) {
     .detail_container {
       width: 100%;

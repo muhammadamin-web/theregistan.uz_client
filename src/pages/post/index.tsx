@@ -22,6 +22,7 @@ import { x } from "../../assets/img";
 import { vk } from "../../assets/img";
 import { copy_link } from "../../assets/img";
 import { BANNER_LINK_URL } from "../../constants.ts"; // constants faylini import qilamiz
+import PostModal from "../../components/PostModal/PostModal.tsx";
 export default function Post(): JSX.Element {
   const { id } = useParams();
 
@@ -92,7 +93,7 @@ export default function Post(): JSX.Element {
 
         <img
           src={BASE_IMG_URL + post?.image?.name}
-          className='w-small post_banner rounded-[1rem] mt-[2vw] xl:mt-[3rem] xs:aspect-[5/3] aspect-[10/5] object-cover'
+          className=' w-small post_banner rounded-[1rem] mt-[2vw] xl:mt-[3rem] xs:aspect-[5/3] aspect-[10/5] '
           alt='registan image'
         />
 
@@ -101,9 +102,6 @@ export default function Post(): JSX.Element {
           dangerouslySetInnerHTML={{ __html: post?.content?.data }}
         ></div>
 
-        <div className='lg:w-[75%] w-[90%] mx-auto'>
-          <TelegramLink />
-        </div>
 
         {/* Share tugmalarini shu yerda qo'shamiz */}
         <div className='lg:w-[75%] w-[90%] mx-auto social_container'>
@@ -120,7 +118,7 @@ export default function Post(): JSX.Element {
           </a>
 
           <a
-             href={`https://t.me/share/url?url=${encodeURIComponent(
+            href={`https://t.me/share/url?url=${encodeURIComponent(
               shareUrl
             )}&text=${encodeURIComponent(post?.title)}`}
             target='_blank'
@@ -131,7 +129,7 @@ export default function Post(): JSX.Element {
           </a>
 
           <a
-             href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
               shareUrl
             )}&text=${encodeURIComponent(post?.title)}`}
             target='_blank'
@@ -142,25 +140,25 @@ export default function Post(): JSX.Element {
           </a>
 
           <a
-  href={`https://vk.com/share.php?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(post?.title)}`}
-  target='_blank'
-  rel='noopener noreferrer'
-  className='share-button vk-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold'
->
-  <img src={vk} alt="VK" />
-</a>
+            href={`https://vk.com/share.php?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(post?.title)}`}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='share-button vk-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold'
+          >
+            <img src={vk} alt="VK" />
+          </a>
 
-<a
-  href="#"
-  onClick={(e) => {
-    e.preventDefault(); // Linkni bosganda sahifa yangilanmasligi uchun
-    navigator.clipboard.writeText(shareUrl); // Linkni clipboard ga nusxalash
-    alert('Link copied to clipboard!');
-  }}
-  className='share-button copy-link-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold'
->
-  <img src={copy_link} alt="Copy Link" />
-</a>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault(); // Linkni bosganda sahifa yangilanmasligi uchun
+              navigator.clipboard.writeText(shareUrl); // Linkni clipboard ga nusxalash
+              alert('Link copied to clipboard!');
+            }}
+            className='share-button copy-link-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold'
+          >
+            <img src={copy_link} alt="Copy Link" />
+          </a>
 
 
         </div>
@@ -169,13 +167,7 @@ export default function Post(): JSX.Element {
       <div className='detail_container container flex flex-col'>
 
         <div className="lg:w-[75%] w-[100%] mx-auto ">
-          <Link className="img_banner_container" to={BANNER_LINK_URL}>
-            <img
-              src={banner_img}
-              alt='banner'
-              className='banner_img_top w-full rounded-[1rem] object-cover'
-            />
-          </Link>
+            <PostModal/>
         </div>
       </div>
       <section className='overflow-hidden'>
