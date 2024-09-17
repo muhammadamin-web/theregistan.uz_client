@@ -18,12 +18,17 @@ const AppLayout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    setShowModal(false); 
-    const timer = setTimeout(() => {
-      setShowModal(true); 
-    }, 3000); 
+    // Modal faqat "/" (Home) sahifasida ochilishi uchun
+    if (location.pathname === "/") {
+      setShowModal(false); 
+      const timer = setTimeout(() => {
+        setShowModal(true); 
+      }, 7000); 
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    } else {
+      setShowModal(false); 
+    }
   }, [location]);
 
   const handleCloseModal = () => {
@@ -34,8 +39,10 @@ const AppLayout = () => {
     <>
       <Layout />
 
-      {/* Modalni ko'rsatish */}
-      <Modal showModal={showModal} handleClose={handleCloseModal} />
+      {/* Modalni faqat Home sahifasida ko'rsatish */}
+      {location.pathname === "/" && (
+        <Modal showModal={showModal} handleClose={handleCloseModal} />
+      )}
     </>
   );
 };

@@ -9,17 +9,17 @@ const Modal = ({ showModal, handleClose }: any) => {
     if (!showModal) return null;
 
     const [img, setImg] = useState(modal2)
-
-
     useEffect(() => {
         if (window.innerWidth < 600) {
             setImg(modal)
         }
-    }, [])
+    }, [])  
     return (
         <div className="modal">
             <div className='modal_box'>
-                <img src={img} alt="" className="modal_imgg" />
+                <a href="https://t.me/theregistan">
+                    <img src={img} alt="" className="modal_imgg" />
+                </a>
                 <TfiClose className='modal_close' onClick={handleClose} />
             </div>
         </div>

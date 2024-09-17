@@ -1,11 +1,22 @@
 import modal from '../../assets/img/modal.png'
 import './PostModal.scss'
 import banner from '../../assets/img/banner.png'
+import banner2 from '../../assets/img/modal2_mobile.png'
+import { useEffect, useState } from 'react'
 
 const PostModal = () => {
+
+    const [img, setImg] = useState(banner)
+    useEffect(() => {
+        if (window.innerWidth < 600) {
+            setImg(banner2)
+        }
+    }, [])
     return (
         <div className="postmodal">
-            <img className='postmodal_imgg' src={banner} alt="" />
+            <a href="https://t.me/theregistan">
+                <img className='postmodal_imgg' src={img} alt="" />
+            </a>
 
             {/* <div className="postmodal_box">
                 <div className="postmodal_img">
