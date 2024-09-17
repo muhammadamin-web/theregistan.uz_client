@@ -125,7 +125,7 @@ export default function Post(): JSX.Element {
             rel='noopener noreferrer'
             className='share-button facebook-button px-4 py-2 rounded bg-[#E5E5E5] text-white font-bold '
           >
-            <img src={telegram} alt="" />
+            <img className="telegram" src={telegram} alt="" />
           </a>
 
           <a
