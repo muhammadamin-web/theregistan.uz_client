@@ -10,7 +10,7 @@ import PaginationComp from "../../components/PaginationComp";
 import "./home.scss";
 import { banner_img } from "../../assets/img";
 import { BANNER_LINK_URL } from "../../constants.ts"; // constants faylini import qilamiz
-import Modal from "../../components/Modal/Modal.tsx";
+// import Modal from "../../components/Modal/Modal.tsx";
 
 
 export default function Home(): JSX.Element {

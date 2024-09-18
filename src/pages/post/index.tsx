@@ -9,19 +9,19 @@ import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../../hooks/useFetch";
 import Card, { BASE_IMG_URL } from "../../components/Card/Card";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import PageLoader from "../../components/loader/PageLoader";
 import { ICat, IPost } from "../../@types";
 import { useEffect } from "react";
-import TelegramLink from "../../components/TelegramLink/TelegramLink";
-import { banner_img } from "../../assets/img";
+// import TelegramLink from "../../components/TelegramLink/TelegramLink";
+// import { banner_img } from "../../assets/img";
 import { facebook } from "../../assets/img";
 import { telegram } from "../../assets/img";
 import { x } from "../../assets/img";
 import { vk } from "../../assets/img";
 import { copy_link } from "../../assets/img";
-import { BANNER_LINK_URL } from "../../constants.ts"; // constants faylini import qilamiz
+// import { BANNER_LINK_URL } from "../../constants.ts"; 
 import PostModal from "../../components/PostModal/PostModal.tsx";
 export default function Post(): JSX.Element {
   const { id } = useParams();
