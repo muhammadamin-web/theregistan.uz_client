@@ -61,7 +61,7 @@ export default function Home(): JSX.Element {
       <img
         src={banner_img}
         alt='banner'
-        className='banner_img_top w-full rounded-[1rem] mb-8 object-cover'
+        className='banner_img_top w-full  mb-8 object-cover'
       />
     </Link>
         

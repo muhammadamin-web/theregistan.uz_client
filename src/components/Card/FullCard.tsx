@@ -12,7 +12,7 @@ export default function FullCard({
   category,
 }: IPost): JSX.Element {
   return (
-    <div className='container md:py-[22px] py-[20px] flex flex-col gap-[1vw]'>
+    <div className='container md:py-[22px] py-[44px] flex flex-col gap-[1vw]'>
 
 
       <Link
@@ -21,7 +21,7 @@ export default function FullCard({
       >
         <img
           src={BASE_IMG_URL + image.name}
-          className=' w-full rounded-[1rem] xs:aspect-[14/9] aspect-[3/1] object-cover'
+          className='fullcard_img w-full  xs:aspect-[14/9] aspect-[3/1] object-cover'
           alt='registan image'
         />
 
@@ -38,7 +38,7 @@ export default function FullCard({
         to={`post/${_id}`}
       >
         <div className='flex justify-between items-end gap-10 md:flex-col'>
-          <h1 className='card_title_banner text-[5vw] md:text-[4vw] lg:text-[3.3vw] lg:max-w-[70vw] xl:text-[4.2rem]  leading-[1.1em] group-hover:underline xs:decoration-2 decoration-4 duration-150 underline-offset-[0.4vw] font-bold decoration-maingreen'>
+          <h1 className='card_title_banner text-[5vw] md:text-[4vw] lg:text-[2.8vw] lg:max-w-[70vw] xl:text-[4.2rem]  leading-[1.1em] group-hover:underline xs:decoration-2 decoration-4 duration-150 underline-offset-[0.4vw] font-bold decoration-maingreen'>
             {title}
           </h1>
           <div className='hidden lg:flex text-[0.8vw] xl:text-[14px] rounded-full duration-150 group-hover:bg-maingreen group-hover:border-none  border border-mainblack p-[15px] w-[6em] h-[6em] xl:w-[84px] xl:h-[84px] items-center justify-center font-bold'>
