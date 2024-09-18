@@ -99,7 +99,7 @@
     height: auto;
     display: flex;
     // padding-left: 14px;
-    column-gap: 28px;
+    column-gap: px;
     flex-wrap: wrap;
     row-gap: 14px;
 }
@@ -110,6 +110,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 16px;
+    transform: scale(0.8);
+
 }
 @media (max-width: 600px) {
     .social_container {
