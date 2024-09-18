@@ -2,6 +2,8 @@
 import modal from '../../assets/img/modal_mobile.png'
 import './Modal.scss'
 import modal2 from '../../assets/img/modal3.png'
+import modal2500 from '../../assets/img/modal2500.png'
+
 
 import { TfiClose } from "react-icons/tfi";
 import { useEffect, useState } from 'react';
@@ -10,7 +12,9 @@ const Modal = ({ showModal, handleClose }: any) => {
 
     const [img, setImg] = useState(modal2)
     useEffect(() => {
-        if (window.innerWidth < 600) {
+        if (window.innerWidth > 2300) {
+            setImg(modal2500)
+        }else if  (window.innerWidth < 600) {
             setImg(modal)
         }
     }, [])  

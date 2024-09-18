@@ -49,8 +49,7 @@ export default function Card({
         <Link to={`/post/${_id}`}>
           <img
             src={`${BASE_IMG_URL + image?.name}`}
-            // className=' rounded-[1rem] w-full bg-black aspect-[5/3] object-cover'
-            className='rounded-[1rem] w-full bg-black aspect-[14/9] object-cover'
+            className='card_img  w-full bg-black aspect-[5/3] object-cover'
             alt='image'
           />
         </Link>
@@ -69,7 +68,7 @@ export default function Card({
             ))}
           </div>
           <Link to={`/post/${_id}`}>
-            <h1 className='card_title xs:text-[4.8vw] md:text-[2.3vw] lg:text-[32px] lh:text-[40px] xl:text-[1.] mt-[1vw] mb-[1.5vw] xl:mt-[1.5rem]  xl:mb-[2rem] group-hover:underline duration-150 line-clamp-3 decoration-2 underline-offset-[0.2em] decoration-maingreen font-bold'>
+            <h1 className='card_title xs:text-[4.8vw] md:text-[2.3vw] lg:text-[26px]  xl:text-[1.] mt-[1vw] mb-[1.5vw] xl:mt-[1.5rem]  xl:mb-[2rem] group-hover:underline duration-150 line-clamp-3 decoration-2 underline-offset-[0.2em] decoration-maingreen font-bold'>
               {/* <h1 className='text-[] mt-[1cqw] mb-[1.5vw] xl:mb-[2rem] group-hover:underline duration-150 line-clamp-3 decoration-2 underline-offset-[0.2em] decoration-maingreen font-bold'> */}
               {title}
             </h1>

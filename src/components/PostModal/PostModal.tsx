@@ -1,14 +1,16 @@
-import modal from '../../assets/img/modal.png'
+import modal from '../../assets/img/modal250.png'
 import './PostModal.scss'
-import banner from '../../assets/img/banner.png'
+// import banner from '../../assets/img/banner.png'
 import banner2 from '../../assets/img/modal2_mobile.png'
 import { useEffect, useState } from 'react'
 
 const PostModal = () => {
 
-    const [img, setImg] = useState(banner)
+    const [img, setImg] = useState(modal)
     useEffect(() => {
-        if (window.innerWidth < 600) {
+        if (window.innerWidth > 2300) {
+            setImg(modal)
+        } else if (window.innerWidth < 600) {
             setImg(banner2)
         }
     }, [])

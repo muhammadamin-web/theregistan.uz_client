@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { FaRegClock } from "react-icons/fa";
+// import { FaRegClock } from "react-icons/fa";
 import ru from "dayjs/locale/ru";
 import "./DateReadUI.scss";
 dayjs.locale(ru);
@@ -29,8 +29,8 @@ export function DateReadUI({ created, readTime, isColored, textColor }: IDR) {
 
       {readTime && (
         <div className=" flex gap-[0.3vw] xs:gap-[1cqi] items-center">
-          <FaRegClock className="w-[1em] h-[1em]" />
-          <p className="font-inter">{readTime} мин</p>
+          {/* <FaRegClock className="w-[1em] h-[1em]" /> */}
+          {/* <p className="font-inter">{readTime} мин</p> */}
         </div>
       )}
     </div>

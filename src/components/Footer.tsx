@@ -5,8 +5,8 @@ export default function Footer() {
   const year = d.getFullYear();
 
   const links = [
-    { path: "/about", name: "О ПРОЕКТЕ" },
-    { path: "/ads", name: "РЕКЛАМОДАТЕЛЯМ" },
+    { path: "/", name: "О ПРОЕКТЕ" },
+    { path: "/", name: "РЕКЛАМОДАТЕЛЯМ" },
     { path: "https://www.instagram.com/theregistan/", name: "INSTAGRAM" },
     { path: "https://t.me/theregistan", name: "TELEGRAM-КАНАЛ" },
     { path: "https://www.facebook.com/theregistan", name: "FACEBOOK" },
