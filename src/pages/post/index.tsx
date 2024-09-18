@@ -51,11 +51,14 @@ export default function Post(): JSX.Element {
       <Helmet>
         {/* Meta ma'lumotlar */}
         <meta name="description" content={strippedDescription} />
-        <meta name="description" content={strippedDescription} />
+        <meta name="og:description" content={strippedDescription} />
         <meta property="og:title" content={post?.title} />
         <meta property="og:type" content="article" />
         <meta property="image" content={BASE_IMG_URL + post?.image?.name} />
-        <meta property="og:site_name" content="Eleksan.uz" />
+        <meta property="og:image" content={BASE_IMG_URL + post?.image?.name} />
+        <meta property="og:site_name" content="Theregistan.uz" />
+        <meta property="og:type" content="article"></meta>
+        <meta property="og:url" content={shareUrl} />
         <title>{post?.title}</title>
       </Helmet>
 
