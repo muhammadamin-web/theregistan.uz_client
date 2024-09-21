@@ -59,11 +59,12 @@ export default function Post(): JSX.Element {
         <meta property="og:site_name" content="Theregistan.uz" />
         <meta property="og:type" content="article"></meta>
         <meta property="og:url" content={shareUrl} />
+        <meta name="google-site-verification" content="kaKWXno2UO4yhbErs-U_1X5eLvGEYcvjIA8vtlqjGMc" />
         <title>{post?.title}</title>
       </Helmet>
 
       <div className='detail_container container flex flex-col'>
-        <h1 className='detail_title text-center m-auto text-[5vw] my-[.4em] mb-[.7em] lg:text-[3.2vw] pt-5 lg:w-[75%] w-[90%] xs:w-full xl:text-[4.5rem] leading-[1.1em] underline duration-150 underline-offset-[0.4vw] font-bold decoration-maingreen'>
+        <h1 className='detail_title text-center m-auto text-[5vw] my-[.4em] mb-[.7em] lg:text-[2.6vw] pt-5 lg:w-[75%] w-[90%] xs:w-full xl:text-[4rem] leading-[1.1em] underline duration-150 underline-offset-[0.4vw] font-bold decoration-maingreen'>
           {post?.title}
         </h1>
 
