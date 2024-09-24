@@ -5,6 +5,7 @@ export interface ICat {
 
 export interface IPost {
   _id: string;
+  slug: string;
   title: string;
   category: ICat[];
   date: string;

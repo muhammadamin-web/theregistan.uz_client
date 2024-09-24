@@ -6,8 +6,9 @@ import "./Card.scss";
 import "./FullCard.scss";
 
 export default function FullCard({
-  _id,
   image,
+  _id,
+  slug,
   title,
   category,
 }: IPost): JSX.Element {
@@ -17,7 +18,7 @@ export default function FullCard({
 
       <Link
         className='text-mainblack xs:order-1 group gap-6 xs:gap-4 duration-150 flex xs:flex-col flex-col-reverse '
-        to={`post/${_id}`}
+        to={`post/${slug}`}
       >
         <img
           src={BASE_IMG_URL + image.name}
@@ -35,7 +36,7 @@ export default function FullCard({
       </div>
       <Link
         className='text-mainblack xs:order-3 group gap-6 xs:gap-4 duration-150 flex xs:flex-col flex-col-reverse '
-        to={`post/${_id}`}
+        to={`post/${slug}`}
       >
         <div className='flex justify-between items-end gap-10 md:flex-col'>
           <h1 className='card_title_banner text-[5vw] md:text-[4vw] lg:text-[2.8vw] lg:max-w-[70vw] xl:text-[4.2rem]  leading-[1.1em] group-hover:underline xs:decoration-2 decoration-4 duration-150 underline-offset-[0.4vw] font-bold decoration-maingreen'>

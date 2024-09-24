@@ -246,3 +246,49 @@ margin-left: 20px;
         font-size: 12px !important;
     }
 }
+.embed-responsive {
+    max-width: 100%; /* Makes it responsive */
+    overflow: hidden; /* Hides any overflow */
+}
+
+.embed-responsive iframe {
+    width: 100%; /* Ensures the iframe takes the full width */
+    height: auto; /* Adjusts the height automatically */
+    border: none; /* Removes the border */
+}
+.text iframe{
+    width: 60%;
+    margin-left: 20%;
+//     max-height: 1200px;
+//    min-height: 500px;
+   height: 1050px;
+    overflow: clip !important;
+}
+.text iframe #document html{
+    overflow: clip !important;
+
+}
+body{
+    overflow-y: clip !important;
+}
+.body{
+    overflow-y: auto !important;
+}
+.webkit{
+    overflow-y: clip;
+overflow: hidden;
+}
+.content-scroll 
+    {
+    overflow-y: clip !important;
+
+}
+body {
+    overflow-y: hidden !important; /* Boshida */
+}
+
+@media (min-width: 1px) { /* Barcha qurilmalar uchun */
+    body {
+        overflow-y: auto !important; /* 5 soniyadan keyin */
+    }
+}
