@@ -32,7 +32,7 @@ export default function Post(): JSX.Element {
     
     // Dastlabki overflow-y ni 'hidden' qilib qo'yamiz
     if (bodyElement) {
-      bodyElement.style.setProperty('overflow-y', 'hidden', 'important');
+      bodyElement.style.setProperty('overflow-y', 'auto', 'important');
     }
 
     const timeout = setTimeout(() => {
