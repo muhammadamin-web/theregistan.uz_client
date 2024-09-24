@@ -7,7 +7,6 @@ import "./FullCard.scss";
 
 export default function FullCard({
   image,
-  _id,
   slug,
   title,
   category,
