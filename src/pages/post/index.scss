@@ -6,7 +6,8 @@
 
     @media (max-width: 650px) {
         margin-bottom: 10px;
-        font-size: 30px;
+        font-size: 22px;
+        line-height: 26px;
     }
 }
 
@@ -218,4 +219,76 @@
 
 .post_img{
     border-radius: 30px;
+}
+.text ul li{
+    list-style: disc;
+}
+.text ul {
+margin-left: 20px;
+}
+.text{
+    h1{
+        font-size: 32px !important;
+    }
+    h2{
+        font-size: 28px !important;
+    }
+    h3{
+        font-size: 24px !important;
+    }
+    h4{
+        font-size: 20px !important;
+    }
+    h5{
+        font-size: 16px !important;
+    }
+    h6{
+        font-size: 12px !important;
+    }
+}
+.embed-responsive {
+    max-width: 100%; /* Makes it responsive */
+    overflow: hidden; /* Hides any overflow */
+}
+
+.embed-responsive iframe {
+    width: 100%; /* Ensures the iframe takes the full width */
+    height: auto; /* Adjusts the height automatically */
+    border: none; /* Removes the border */
+}
+.text iframe{
+    width: 60%;
+    margin-left: 20%;
+//     max-height: 1200px;
+//    min-height: 500px;
+   height: 1050px;
+    overflow: clip !important;
+}
+.text iframe #document html{
+    overflow: clip !important;
+
+}
+body{
+    overflow-y: clip !important;
+}
+.body{
+    overflow-y: auto !important;
+}
+.webkit{
+    overflow-y: clip;
+overflow: hidden;
+}
+.content-scroll 
+    {
+    overflow-y: clip !important;
+
+}
+body {
+    overflow-y: hidden !important; /* Boshida */
+}
+
+@media (min-width: 1px) { /* Barcha qurilmalar uchun */
+    body {
+        overflow-y: auto !important; /* 5 soniyadan keyin */
+    }
 }

@@ -15,7 +15,7 @@ export function DateReadUI({ created, readTime, isColored, textColor }: IDR) {
   // Set the locale to Russian
 
   // Format the date using Day.js
-  const formattedDateString = dayjs(created).format("D MMMM YYYY года");
+  const formattedDateString = dayjs(created).format("D MMMM YYYY г.");
 
   return (
     <div
