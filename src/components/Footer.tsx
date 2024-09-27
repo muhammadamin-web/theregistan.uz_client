@@ -5,17 +5,17 @@ export default function Footer() {
   const year = d.getFullYear();
 
   const links = [
-    { path: "/", name: "О ПРОЕКТЕ" },
-    { path: "/", name: "РЕКЛАМОДАТЕЛЯМ" },
-    { path: "https://www.instagram.com/theregistan/", name: "INSTAGRAM" },
-    { path: "https://t.me/theregistan", name: "TELEGRAM-КАНАЛ" },
-    { path: "https://www.facebook.com/theregistan", name: "FACEBOOK" },
+    { path: "/", name: "О проекте" },
+    { path: "/", name: "Рекламодателем" },
+    { path: "https://www.instagram.com/theregistan/", name: "Instagram" },
+    { path: "https://t.me/theregistan", name: "Telegram-канал" },
+    { path: "https://www.facebook.com/theregistan", name: "Facebook" },
   ];
   return (
     // <footer className='mt-auto border-t border-[#131313] xs:py-[4vw] py-[1.5vw] xl:py-[2rem] '>
     <footer className='mt-auto border-t border-[#131313] py-[22px] '>
       <div className='container lg:w-[85%]'>
-        <nav className='flex xs:flex-col md:flex-col xs:items-center md:items-center text-[#131313] justify-center gap-[3vw] xl:gap-[1.7rem] '>
+        <nav className='flex xs:flex-col md:flex-col xs:items-center md:items-center text-[#131313] justify-center gap-[1.5vw] xl:gap-[1.7rem] '>
           {links.map((l, i) => {
             if (i == 0 || i == 1) {
               return (
