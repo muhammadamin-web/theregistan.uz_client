@@ -8,9 +8,9 @@ import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../../hooks/useFetch";
 import Card, { BASE_IMG_URL } from "../../components/Card/Card";
-import PageLoader from "../../components/loader/PageLoader";
+// import PageLoader from "../../components/loader/PageLoader";
 import { ICat, IPost } from "../../@types";
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { facebook, telegram, x, vk, copy_link } from "../../assets/img"; // Import images
 import PostModal from "../../components/PostModal/PostModal.tsx";
 import { Helmet } from "react-helmet";
@@ -19,8 +19,10 @@ export default function Post(): JSX.Element {
   const { id } = useParams();
 
   // Barcha hook-lar komponent boshida chaqiriladi
-  const { data: posts, isFetching: newsLoading2, error: newsError2 } = useFetch("/news");
-  const { data: postSingle, isFetching: newsLoading, error: newsError } = useFetch(`/news/${id}`);
+  const { data: posts,   } = useFetch("/news");
+  const { data: postSingle, } = useFetch(`/news/${id}`);
+  // const { data: posts, isFetching: newsLoading2, error: newsError2 } = useFetch("/news");
+  // const { data: postSingle, isFetching: newsLoading, error: newsError } = useFetch(`/news/${id}`);
 
   // useEffect(() => {
   //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -53,7 +55,7 @@ export default function Post(): JSX.Element {
   // `post` mavjudligini tekshirib, o'zgaruvchilarni hisoblaymiz
   const cleanedContent = post ? stripHtml(stripPreTags(post.content.data || "")) : "";
   const cleanContent = post
-    ? post.content.data.replace(/<pre.*?>(.*?)<\/pre>/gs, (match: any, p1: any) => {
+    ? post.content.data.replace(/<pre.*?>(.*?)<\/pre>/gs, (_match: any, p1: any) => {
       return `${p1.replace(/&lt;/g, '<').replace(/&gt;/g, '>')}`;
     })
     : "";
@@ -96,7 +98,7 @@ export default function Post(): JSX.Element {
 
       <div className="detail_container container flex flex-col">
         <h1 className="detail_title text-center m-auto text-[5vw] my-[.4em] mb-[.7em] lg:text-[2.6vw] pt-5 lg:w-[75%] w-[90%] xs:w-full xl:text-[4rem] leading-[1.1em] underline duration-150 underline-offset-[0.4vw] font-bold decoration-maingreen">
-          {post?.title}  {post?._id}
+          {post?.title} 
         </h1>
 
         <div className="flex gap-[1vw] text lg:w-[75%] w-[90%] xs:w-full">

@@ -11,7 +11,7 @@ interface IDR {
   textColor: string;
 }
 
-export function DateReadUI({ created, readTime, isColored, textColor }: IDR) {
+export function DateReadUI({ created,  isColored, textColor }: IDR) {
   // Set the locale to Russian
 
   // Format the date using Day.js
@@ -27,12 +27,12 @@ export function DateReadUI({ created, readTime, isColored, textColor }: IDR) {
     >
       <p className="date_created font-inter">{formattedDateString}</p>
 
-      {readTime && (
-        <div className=" flex gap-[0.3vw] xs:gap-[1cqi] items-center">
+      {/* {readTime && (
+        <div className=" flex gap-[0.3vw] xs:gap-[1cqi] items-center"> */}
           {/* <FaRegClock className="w-[1em] h-[1em]" /> */}
-          <p className="font-inter date_created">{readTime} мин</p>
+          {/* <p className="font-inter date_created">{readTime} мин</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

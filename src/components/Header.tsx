@@ -96,7 +96,7 @@ export default function Header() {
                   setMenuShow(true);
                 }}
                 key={l.category.name}
-                className="hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] py-[.8rem] font-bold duration-150 uppercase border-b border-black w-full text-center "
+                className="hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] py-[.8rem] font-bold duration-150  border-b border-black w-full text-center "
                 to={"/category/" + l.category._id}
               >
                 {l.category.name}
@@ -111,7 +111,7 @@ export default function Header() {
             {menus.data.map((l: Imenu) => (
               <NavLink
                 key={l.category.name}
-                className="hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] font-bold duration-150 uppercase"
+                className="hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] font-bold duration-150 "
                 to={"/category/" + l.category._id}
               >
                 {l.category.name}
