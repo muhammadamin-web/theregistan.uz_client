@@ -213,82 +213,137 @@
 
     .copy_link {
         // transform: scale(1.2); 
-
     }
 }
 
-.post_img{
+.post_img {
     border-radius: 30px;
 }
-.text ul li{
+
+.text ul li {
     list-style: disc;
 }
+
 .text ul {
-margin-left: 20px;
+    margin-left: 20px;
 }
-.text{
-    h1{
+
+.text {
+    h1 {
         font-size: 32px !important;
     }
-    h2{
+
+    h2 {
         font-size: 28px !important;
     }
-    h3{
+
+    h3 {
         font-size: 24px !important;
     }
-    h4{
+
+    h4 {
         font-size: 20px !important;
     }
-    h5{
+
+    h5 {
         font-size: 16px !important;
     }
-    h6{
+
+    h6 {
         font-size: 12px !important;
     }
 }
+
 .embed-responsive {
-    max-width: 100%; /* Makes it responsive */
-    overflow: hidden; /* Hides any overflow */
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .embed-responsive iframe {
-    width: 100%; /* Ensures the iframe takes the full width */
-    height: auto; /* Adjusts the height automatically */
-    border: none; /* Removes the border */
+    width: 100%;
+    height: auto;
+    border: none;
 }
-.text iframe{
-    width: 60%;
-    margin-left: 20%;
-//     max-height: 1200px;
-//    min-height: 500px;
-   height: 1050px;
-    overflow: clip !important;
-}
-.text iframe #document html{
+
+.text iframe {
+    margin-top: 20px;
+    // width: 60%;
+    // margin-left: 20%;
+    // height: fit-content;
     overflow: clip !important;
 
-}
-body{
-    overflow-y: clip !important;
-}
-.body{
-    overflow-y: auto !important;
-}
-.webkit{
-    overflow-y: clip;
-overflow: hidden;
-}
-.content-scroll 
-    {
-    overflow-y: clip !important;
+    // @media (max-width:1420px) {
+    //     height: 90vh;
+    // }
+
+    // @media (max-width:960px) {
+    //     height: 93vh;
+    // }
+
+    // @media (max-width:800px) {
+    //     height: 82vh;
+    // }
+
+    // @media (max-width:600px) {
+    //     width: 90%;
+    //     margin-left: 5%;
+    //     height: 96vh;
+    // }
+
+    // @media (max-width:500px) {
+    //     height: 83vh;
+    // }
+
+    // @media (max-width:400px) {
+    //     height: 72vh;
+    // }
+
+    // @media (max-width:360px) {
+    //     height: 65vh;
+    // }
 
 }
-body {
-    overflow-y: hidden !important; /* Boshida */
-}
 
-@media (min-width: 1px) { /* Barcha qurilmalar uchun */
-    body {
-        overflow-y: auto !important; /* 5 soniyadan keyin */
+// .text iframe #document html {
+//     overflow: clip !important;
+// }
+
+// body {
+//     overflow-y: clip !important;
+// }
+
+// .body {
+//     overflow-y: auto !important;
+// }
+
+// .webkit {
+//     overflow-y: clip;
+//     overflow: hidden;
+// }
+
+// .content-scroll {
+//     overflow-y: clip !important;
+// }
+
+// body {
+//     overflow-y: hidden !important;
+// }
+
+// @media (min-width: 1px) {
+//     body {
+//         overflow-y: auto !important;
+//     }
+// }
+
+.text {
+
+    iframe {
+        margin: 20px auto !important;
+        display: block;
+
     }
+}
+
+.twitter-tweet {
+    margin: auto;
 }

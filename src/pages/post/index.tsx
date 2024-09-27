@@ -8,10 +8,9 @@ import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../../hooks/useFetch";
 import Card, { BASE_IMG_URL } from "../../components/Card/Card";
-
 import PageLoader from "../../components/loader/PageLoader";
 import { ICat, IPost } from "../../@types";
-import { useEffect } from "react";
+import { useEffect, useRef } from 'react';
 import { facebook, telegram, x, vk, copy_link } from "../../assets/img"; // Import images
 import PostModal from "../../components/PostModal/PostModal.tsx";
 import { Helmet } from "react-helmet";
@@ -19,63 +18,66 @@ import { Helmet } from "react-helmet";
 export default function Post(): JSX.Element {
   const { id } = useParams();
 
+  // Barcha hook-lar komponent boshida chaqiriladi
   const { data: posts, isFetching: newsLoading2, error: newsError2 } = useFetch("/news");
   const { data: postSingle, isFetching: newsLoading, error: newsError } = useFetch(`/news/${id}`);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, [id]);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  // }, [id]);
 
-  // O'zgarish: body overflow-y xususiyatini 5 soniyadan keyin 'auto' qilib o'zgartirish
-  useEffect(() => {
-    const bodyElement = document.querySelector("body");
-    
-    // Dastlabki overflow-y ni 'hidden' qilib qo'yamiz
-    if (bodyElement) {
-      bodyElement.style.setProperty('overflow-y', 'auto', 'important');
-    }
+  // **Hook-lardan keyin** shartli `return` operatorlarini qo'shing
+  // if (!postSingle && newsLoading) return <PageLoader />;
+  // if (newsError) return <div>...Error</div>;
+  // if (!posts && newsLoading2) return <PageLoader />;
+  // if (newsError2) return <div>...Error</div>;
 
-    const timeout = setTimeout(() => {
-      if (bodyElement) {
-        bodyElement.style.setProperty('overflow-y', 'auto', 'important'); // 5 soniyadan so'ng overflow-y'ni auto ga o'zgartirish
-      }
-    }, 5000); // 5000 millisekund, ya'ni 5 soniya
-
-    // Cleanup function
-    return () => {
-      clearTimeout(timeout); // Komponentdan chiqqanda timeoutni tozalash
-      if (bodyElement) {
-        bodyElement.style.removeProperty('overflow-y'); // O'chirishdan oldin overflow-y'ni tozalash
-      }
-    };
-  }, [postSingle]);
-
-  if (!postSingle && newsLoading) return <PageLoader />;
-  if (newsError) return <div>...Error</div>;
-  if (!posts && newsLoading2) return <PageLoader />;
-  if (newsError2) return <div>...Error</div>;
-
+  // Ma'lumotlar yuklangandan keyin `post` o'zgaruvchisini olamiz
   const post = postSingle?.data;
   const filteredPosts = posts?.news.filter((p: IPost) => p._id !== id);
   const customWidth = `w-full h-full`;
 
-  // Get the current page URL for sharing
+  // Share URL ni olish
   const shareUrl = window.location.href;
 
-  // Strip HTML tags from the post description
+  // HTML teglarini olib tashlash funksiyalari
   const stripHtml = (html: string) => {
     const doc = new DOMParser().parseFromString(html, "text/html");
     return doc.body.textContent || "";
   };
 
-  // Strip <pre> tags from the content
   const stripPreTags = (html: string) => {
     return html.replace(/<pre.*?>.*?<\/pre>/gs, '');
   };
-  
-  // Clean the content by removing <pre> tags and stripping HTML
-  const cleanedContent = stripHtml(stripPreTags(post?.content?.data || ""));
-  
+
+  // `post` mavjudligini tekshirib, o'zgaruvchilarni hisoblaymiz
+  const cleanedContent = post ? stripHtml(stripPreTags(post.content.data || "")) : "";
+  const cleanContent = post
+    ? post.content.data.replace(/<pre.*?>(.*?)<\/pre>/gs, (match: any, p1: any) => {
+      return `${p1.replace(/&lt;/g, '<').replace(/&gt;/g, '>')}`;
+    })
+    : "";
+
+  // `useEffect` ichida `cleanContent` mavjudligini tekshiramiz
+  useEffect(() => {
+    // if (!cleanContent) return; // Agar `cleanContent` mavjud bo'lmasa, hech narsa qilmaymiz
+
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = cleanContent; // HTML kodini div ichiga kiritish
+    const scripts = tempDiv.querySelectorAll("script");
+
+    scripts.forEach((oldScript) => {
+      const newScript = document.createElement("script");
+      if (oldScript.src) {
+        newScript.src = oldScript.src;
+      } else {
+        newScript.innerHTML = oldScript.innerHTML;
+      }
+      newScript.async = true;
+      document.body.appendChild(newScript);
+    });
+  }, [cleanContent]); // `cleanContent` o'zgarganda skriptlarni qayta yuklash
+
   return (
     <>
       <Helmet>
@@ -109,12 +111,16 @@ export default function Post(): JSX.Element {
               />
             ))}
           </div>
-          <DateReadUI
-            readTime={post.readTime}
-            created={post.date}
-            isColored={post.isColored}
-            textColor={post.textColor}
-          />
+          {post && post.readTime && (
+  <DateReadUI
+    readTime={post.readTime}
+    created={post.date}
+    isColored={post.isColored}
+    textColor={post.textColor}
+  />
+)}
+
+
         </div>
 
         <img
@@ -125,9 +131,9 @@ export default function Post(): JSX.Element {
 
         <div
           className="text pt-5 lg:w-[75%] w-[90%] xs:w-full"
-          dangerouslySetInnerHTML={{ __html: post?.content?.data }} // HTMLni to'g'ridan-to'g'ri chiqarish
+          dangerouslySetInnerHTML={{ __html: cleanContent || 'Tavsif topilmadi' }} // HTMLni to'g'ridan-to'g'ri chiqarish
         />
-        
+
         {/* Share buttons */}
         <div className="lg:w-[75%] w-[90%] mx-auto social_container">
           <a
