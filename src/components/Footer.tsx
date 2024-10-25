@@ -21,7 +21,7 @@ export default function Footer() {
               return (
                 <Link
                   key={l.name}
-                  className='hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] font-bold duration-150'
+                  className='header_font hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] font-bold duration-150'
                   to={l.path}
                 >
                   {l.name}
@@ -31,7 +31,7 @@ export default function Footer() {
             return (
               <Link
                 key={l.name}
-                className='hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] font-bold duration-150'
+                className='header_font hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] font-bold duration-150'
                 to={l.path}
                 target='_blank'
               >

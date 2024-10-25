@@ -16,6 +16,11 @@
         height: auto;
     }
 }
+.pagination_number ul li span{
+    font-family: 'ttf', sans-serif !important;
+    // font-weight: 500;
+
+}
 
 @media (max-width: 1000px) {
     .banner_img_top{

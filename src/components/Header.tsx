@@ -111,7 +111,7 @@ export default function Header() {
             {menus.data.map((l: Imenu) => (
               <NavLink
                 key={l.category.name}
-                className="hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] font-bold duration-150 "
+                className="header_font hover:underline underline-offset-[0.4em] decoration-2 decoration-maingreen text-[14px] font-bold duration-150 "
                 to={"/category/" + l.category._id}
               >
                 {l.category.name}

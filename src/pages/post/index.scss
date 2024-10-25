@@ -1,9 +1,9 @@
 .detail_title {
     text-decoration: none;
     text-align: left;
-    font-weight: 600;
+    font-family: 'ttf', sans-serif;
+    font-weight: 700;
     margin-bottom: 20px;
-
     @media (max-width: 650px) {
         margin-bottom: 10px;
         font-size: 22px;
@@ -229,8 +229,12 @@
 }
 
 .text {
+    p{
+        font-size: 18px;
+    }
     h1 {
         font-size: 32px !important;
+        font-family: 'ttf',sans-serif;
     }
 
     h2 {
@@ -242,6 +246,7 @@
     }
 
     h4 {
+        font-family: 'ttf',sans-serif;
         font-size: 20px !important;
     }
 
@@ -251,6 +256,10 @@
 
     h6 {
         font-size: 12px !important;
+    }
+    blockquote{
+        font-family: 'ttf',sans-serif;
+        line-height: 26px;
     }
 }
 

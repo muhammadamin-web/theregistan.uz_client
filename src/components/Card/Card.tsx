@@ -68,7 +68,7 @@ export default function Card({
             ))}
           </div>
           <Link to={`/post/${slug}`}>
-            <h1 className='card_title xs:text-[4.8vw] md:text-[2.3vw] lg:text-[26px]  xl:text-[1.] mt-[1vw] mb-[1.5vw] xl:mt-[1.5rem]  xl:mb-[2rem] group-hover:underline duration-150 line-clamp-3 decoration-2 underline-offset-[0.2em] decoration-maingreen font-bold'>
+            <h1 className='card_title xs:text-[4.8vw] md:text-[2.3vw] lg:text-[26px]  xl:text-[1.] mt-[1vw] mb-[1.5vw] xl:mt-[1.5rem]  xl:mb-[2rem] group-hover:underline duration-150 line-clamp-4 decoration-2 underline-offset-[0.2em] decoration-maingreen font-bold'>
               {/* <h1 className='text-[] mt-[1cqw] mb-[1.5vw] xl:mb-[2rem] group-hover:underline duration-150 line-clamp-3 decoration-2 underline-offset-[0.2em] decoration-maingreen font-bold'> */}
               {title}
             </h1>

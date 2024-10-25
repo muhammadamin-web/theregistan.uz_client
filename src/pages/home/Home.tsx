@@ -91,7 +91,7 @@ export default function Home(): JSX.Element {
 
       {/* Sahifa bo'yicha pagination */}
       <div className="container flex justify-center py-[4vw] xl:py-[5rem]">
-        <ul className="flex items-center justify-center gap-[0.4vw] text-black xs:text-[1.3rem] md:text-[1.5rem] lg:text-[1.2vw] xl:text-[2rem]">
+        <ul className="pagination_number flex items-center justify-center gap-[0.4vw] text-black xs:text-[1.3rem] md:text-[1.5rem] lg:text-[1.2vw] xl:text-[2rem]">
           <PaginationComp current={current} news={news} />
         </ul>
       </div>

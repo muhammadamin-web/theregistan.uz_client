@@ -1,38 +1,44 @@
-.card_title_banner{
+.card_title_banner {
     // line-height: 40px;
     // padding: 6px 12px;
     font-weight: 600;
     display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    @media  (max-width: 1000px) {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: 'ttf', sans-serif;
+
+    @media (max-width: 1000px) {
         // margin-top: 0px;
         line-height: 40px;
 
     }
-    @media  (max-width: 900px) {
+
+    @media (max-width: 900px) {
         // margin-top: 0px;
         line-height: 40px;
 
     }
-    @media  (max-width: 767px) {
+
+    @media (max-width: 767px) {
         // margin-top: 0px;
         line-height: 40px;
 
     }
-    @media  (max-width: 600px) {
+
+    @media (max-width: 600px) {
         // margin-top: 0px;
         line-height: 30px;
 
     }
-    @media  (max-width: 400px) {
+
+    @media (max-width: 400px) {
         // margin-top: 0px;
         line-height: 25px;
 
     }
 }
 
-.fullcard_img{
+.fullcard_img {
     border-radius: 30px;
 }

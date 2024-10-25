@@ -15,20 +15,43 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'ttf';
+  src: url('./ACTAY-REGULAR.OTF') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ttf';
+  src: url('./ACTAYWIDE-BOLD.OTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+.header_font {
+  font-family: 'ttf', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
   padding-inline: 4vw;
-  
+
 }
+
 @media(max-width:1000px) {
   .container {
     width: 100%;
 
-    
+
   }
 }
+
 .lds-ellipsis {
   display: inline-block;
   position: relative;
